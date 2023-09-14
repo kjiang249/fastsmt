@@ -24,7 +24,7 @@ $ git clone https://github.com/Z3Prover/z3.git z3
 $ cd z3
 
 # Checkout Z3 version 4.6.2 that we tested against
-$ git checkout 5651d00751a1eb40b94db86f00cb7d3ec9711c4d 
+$ git checkout tags/z3-4.12.2 #kj we now checkout to 4.12.2 instead of 4.6.2 
 ```
 
 Install and compile Z3 4.6.2 (with cpp bindings):
@@ -42,10 +42,11 @@ Setup python virtual environment. The code is tested with python version 3.5:
 ```bash
 $ virtualenv -p python3 --system-site-packages venv
 $ source venv/bin/activate
+install the following packages in venv:'numpy', 'scipy', 'scikit-learn', 'torch', 'matplotlib', 'tensorboardX','seaborn'
 (venv) $ python setup.py install
 ```
 
-Install and compile Z3 4.6.2 (with Python bindings):
+Install and compile Z3 (with Python bindings):
 
 ```bash
 (venv) $ cd z3
@@ -67,9 +68,11 @@ $ cd ..
 Please run the tests to make sure installation was successful:
 
 ```bash
-$ ./test/run_tests.sh
+$ ./test/run_tests_no_aig.sh #kj ignore the first line of output or we just remove it probably
 OK!
 ```
+## Reproduce the learning strategies
+Go to the experiements folder, following the Readme
 
 ## Creating the dataset
 
