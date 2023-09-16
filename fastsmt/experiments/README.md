@@ -1,6 +1,6 @@
 # Intro
 
-Here we describe how to reproduce results reported in [Z3alpha](https://github.com/JohnLu1990/z3alpha) submission to AAAI24 Student Program. Note that you need to use Z3 version `12.2.2` to get the same results. Please consult setup instructions on this.
+Here we describe how to reproduce results reported in [Z3alpha](https://github.com/JohnLu1990/z3alpha) submission to AAAI24 Student Program. Note that you need to use Z3 version `4.12.2` to get the same results. Please consult setup instructions on this.
 
 # Downloading benchmarks
 

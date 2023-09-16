@@ -1,4 +1,4 @@
-This is a fork of [FastSMT](https://github.com/eth-sri/fastsmt) that is compatible with Z3 12.2.2. 
+This is a fork of [FastSMT](https://github.com/eth-sri/fastsmt) that is compatible with Z3 4.12.2. 
 
 ## Setup Instructions
 
@@ -9,13 +9,13 @@ $ git clone https://github.com/kjiang249/fastsmt.git
 $ cd fastsmt
 ```
 
-Download Z3 12.2.2
+Download Z3 4.12.2
 
 ```bash
 $ git clone https://github.com/Z3Prover/z3.git z3
 $ cd z3
 
-# Checkout Z3 version 12.2.2 that we tested against
+# Checkout Z3 version 4.12.2 that we tested against
 $ git checkout tags/z3-4.12.2
 ```
 
