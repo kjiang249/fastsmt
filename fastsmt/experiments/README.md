@@ -34,30 +34,3 @@ In order to synthesize single master strategy out of all created strategies run 
 ```bash
 (venv) $ ./experiments/synthesis/tree_sage2.sh
 ```
-
-# Evaluation
-
-To compare all strategies synthesized by the neural network apprentice model against Z3 with time limit 10 seconds (and reproduce Table 2 in our work) use:
-```bash
-(venv) $ ./experiments/evaluate_all_vs_z3.sh
-```
-
-To compare all strategies synthesized by the neural network apprentice model against Z3 with time limit 10 minutes (and reproduce Table 5 in our work) use:
-```bash
-(venv) $ ./experiments/evaluate_all_vs_z3_10min.sh
-```
-
-To compare final strategies after synthesis with Z3 (and reproduce Table 3 in our work) use:
-
-```bash
-(venv) $ ./experiments/evaluate_final_against_z3.sh
-```
-
-In order to compare search models and reproduce Figures 3 and 4 from our work use:
-
-```bash 
-(venv) $ ./experiments/runners/run_sage2_test.sh
-(venv) $ python scripts/py/analyze_synthesis.py --eval_dir experiments/eval/sage2/ --models sage2_apprentice:10 sage2_random:1 sage2_bilinear:10 sage2_bfs:1 sage2_evo:1 --folder valid --legend
-(venv) $ python scripts/py/analyze_synthesis.py --eval_dir experiments/eval/sage2/ --models sage2_apprentice:10 sage2_apprentice:8 sage2_apprentice:6 sage2_apprentice:4 sage2_apprentice:2 --folder valid --legend
-```
-
