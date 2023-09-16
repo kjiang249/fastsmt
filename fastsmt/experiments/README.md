@@ -1,28 +1,17 @@
 # Intro
 
-Here we describe how to reproduce results reported in our paper. Note that you need to use Z3 version `4.6.2` to get the same results. Please consult setup instructions on this.
+Here we describe how to reproduce results reported in [Z3alpha](https://github.com/JohnLu1990/z3alpha) submission to AAAI24 Student Program. Note that you need to use Z3 version `12.2.2` to get the same results. Please consult setup instructions on this.
 
 # Downloading benchmarks
 
-We provide scripts to download the benchmarks used in our experiments either from our repository or official SMT-LIB repository.
-In both cases, after the download relevant datasets can be found in corresponding folders - e.g. `experiments/data/sage2/train/` will contain training set to be used for synthesis on *Sage2* benchmark. 
+We provide scripts to download the benchmarks used in our experiments from this repository.
+After the download relevant datasets can be found in corresponding folders - e.g. `experiments/data/sage2/train/` will contain training set to be used for synthesis on *Sage2* benchmark. 
 
-#### SRI repository (recommended)
+#### SRI repository
 
 ```bash
 $ ./download_data.sh
 ```
-
-#### SMT-LIB repository
-
-You can also download our benchmarks directly from the official SMT-LIB repository.
-In the case you download benchmarks from the official repository note that they might be different from ours as they are subject to frequent updates from SMT-LIB community. 
-
-```bash
-$ ./download_data_smtlib.sh
-```
-
-Note that file sizes are much bigger in this case as it also downloads benchmarks not used in our experiments.
 
 # Learning and synthesis
 
@@ -30,22 +19,7 @@ You can find strategies resulting from our experiments in `final_strategies` sub
 
 ## Learning 
 
-Note that you need FastText set up properly in order to run bilinear model. Please run the following command which will create the FastText binary and also all relevant libraries (shared, static, PIC):
-
-```bash
-$ git clone https://github.com/facebookresearch/fastText.git
-$ cd fastText
-$ git checkout a5d22aba45f38c12d195ecc6c3e448aa3690fbbd
-$ mkdir build && cd build && cmake ..
-$ make 
-$ cd ..
-# FastText bindings for Python
-$ pip install .
-$ cd ..
-```
-
-After that, add FastText to PYTHONPATH.
-In order to train all models and reproduce our experiment on Sage2 benchmark use the following command:
+In order to reproduce our experiment on Sage2 benchmark use the following command:
 
 ```bash
 (venv) $ ./experiments/runners/run_sage2.sh
