@@ -55,11 +55,6 @@
                 "boolean": [
                     "push_ite_bv"
                 ]
-            },
-            "aig": {
-                "boolean": [
-                    "aig_per_assertion"
-                ]
             }
         }
     }
